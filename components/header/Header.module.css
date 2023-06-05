@@ -1,0 +1,39 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    max-width: 70%;
+    /* max-width: 1280px; */
+    margin:auto;
+    padding: 2rem;
+    /* border-bottom: 2px solid #000; */
+  /* padding: 3rem; */
+  }
+  .sub_header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  
+  }
+  .nav ul,
+  .profile ul,
+  .brandLogo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav ul,
+  .profile ul{
+    list-style-type:none;
+  }
+  .avatar{
+    width: 3rem;
+  }
+  .profile .button{
+    cursor: pointer;
+    outline: none;
+  }
