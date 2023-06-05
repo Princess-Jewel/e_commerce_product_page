@@ -14,27 +14,79 @@
 .section {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  /* margin-top: 40px; */
-  /* max-width: 70%; */
-  padding: 0px 100px;
+  /* padding: 0px 20px; */
   margin: 100px auto 0px;
 }
 
 .mainImage {
-  width: 80%;
+  width: 100%;
   border-radius: 16px;
 }
-/* .productImage {
-} */
+
 .list li img {
   width: 80px;
   border-radius: 12px;
-  /* border: 2px rgb(251 146 60) solid; */
 }
 .selected {
   border: 3px #eb9651 solid;
-  /* border-radius: 12px; */
   opacity: 0.8;
+}
+.productDetails {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding:40px 20px; */
+}
+.subHeading {
+  /* background-color: rgb(241 245 249); */
+  padding: 0.25rem 0;
+  color: #fb923c;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  /* display: inline-block; */
+  /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); */
+  margin-bottom: 20px;
+  /* border-radius: 4px; */
+}
+.heading{
+    color: rgb(15 23 42);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.875rem; 
+    line-height: 2.25rem; 
+
+}
+.text{
+    color: rgb(71 85 105);
+    line-height: 1.625;
+    margin-bottom: 20px;
+}
+.amountSpan{
+    /* padding: 0.25rem 0; */
+    color: #fb923c;
+    /* margin: auto; */
+    /* padding: 4px 8px; */
+    background-color: rgb(255 237 213);;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.025em;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    /* display: inline-block; */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    /* margin-bottom: 20px; */
+}
+.amount{
+    color: rgb(15 23 42);
+    font-size: 1.5rem; 
+    line-height: 2rem; 
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -42,13 +94,27 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 80%;
+    padding: 0px 80px;
   }
   .list {
     gap: 2rem;
+  }
+  .mainImage {
+    width: 80%;
+    /* border-radius: 16px; */
+  }
+  .heading{
+    font-size: 2.25rem; 
+line-height: 2.5rem; 
   }
 }
 @media (min-width: 1024px) {
   .section {
     padding: 0px 130px;
   }
+  .heading{
+    font-size: 3rem; 
+    line-height: 1;
+
+}
 }
