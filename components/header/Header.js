@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
-import { useState } from "react";
-// import { data } from "";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "./Header.module.css";
-import { data } from "@/app/data";
+
 
 const Header = () => {
-  const [products] = useState(data);
+ 
   return (
     <header className={styles.header}>
       <div className={styles.sub_header}>
@@ -29,9 +27,9 @@ const Header = () => {
       <div className={styles.profile}>
         <ul>
           <li>
-            <button className={styles.button}>
-              <AiOutlineShoppingCart />
-            </button>
+            {/* <button className={styles.button}> */}
+              <AiOutlineShoppingCart color="#727474"  size="28px" />
+            {/* </button> */}
           </li>
           <li>
             <img
