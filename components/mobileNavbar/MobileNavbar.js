@@ -1,16 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-// import { HiMenu } from "react-icons/hi";
 import styles from "./MobileNavbar.module.css";
+import Cart from "../cart/Cart";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
+
   return (
     <header className={styles.mobileHeader}>
       <div className={styles.sub_header}>
-        {/* BRAND LOGO */}
 
+        {/* BRAND LOGO */}
         <div className={styles.mobileBrandLogo}>
           {!isOpen && (
             <img
@@ -46,10 +47,11 @@ const MobileNavbar = () => {
       </div>
       <div className={styles.profile}>
         <ul>
-          <li>
-            {/* <button className={styles.button}> */}
-            <AiOutlineShoppingCart color="#727474" fontSize={28} />
-            {/* </button> */}
+          <li
+            className={styles.cartIcon}
+            onClick={() => setOpenCart(!openCart)}
+          >
+            <img src="../images/icon-cart.svg" alt="cart icon" />
           </li>
           <li>
             <img
@@ -59,6 +61,7 @@ const MobileNavbar = () => {
             />
           </li>
         </ul>
+        {openCart && <Cart />}
       </div>
     </header>
   );

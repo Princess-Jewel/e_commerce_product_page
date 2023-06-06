@@ -14,9 +14,7 @@
   align-items: center;
   gap: 2rem;
 }
-/* .nav {
-    display: none;
-  } */
+
 .mobileNav {
   position: fixed;
   top: 0;
@@ -29,24 +27,22 @@
   z-index: 110;
   transition: all 0.3s ease-in-out;
 }
-.closeMenu{
-    margin-bottom: 50px;
+.closeMenu {
+  margin-bottom: 50px;
 }
-/* .mobileNav.open {
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  padding: 2rem;
-} */
 
+.profile {
+  position: relative;
+}
 .profile ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
-
+.cartIcon {
+  cursor: pointer;
+}
 .mobileNav ul {
   display: flex;
   justify-content: flex-start;
@@ -71,10 +67,6 @@
 .avatar {
   width: 2rem;
 }
-/* .profile .button {
-  cursor: pointer;
-  outline: none;
-} */
 
 @media (min-width: 1024px) {
   .mobileHeader {

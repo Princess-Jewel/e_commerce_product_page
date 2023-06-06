@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import Header from "../../components/header/Header";
 import { data } from "./data";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
@@ -101,7 +100,7 @@ const page = () => {
               onClick={() => setShowLightBox(true)}
             />
 
-            {/* </div> */}
+          
           </div>
 
           <ul className={styles.list}>
@@ -141,7 +140,7 @@ const page = () => {
           </div>
 
           <div className={styles.counterAndAdd}>
-            {/* <div className={styles.counter}> */}
+      
             <ul className={styles.counterList}>
               <li onClick={handleMinus}>
                 <img src="../../images/icon-minus.svg" alt="minus sign" />
@@ -158,7 +157,6 @@ const page = () => {
             </button>
           </div>
 
-          {/* </div> */}
         </article>
       </section>
     </>

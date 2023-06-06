@@ -1,12 +1,9 @@
 import React from "react";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-// import {close} from "../../public/images/icon-cart.svg";
 import styles from "./LightBox.module.css";
 
 const LightBox = ({
   products,
   nextSlide,
-  slideIndex,
   previousSlide,
   setShowLightBox,
   value,
@@ -16,12 +13,7 @@ const LightBox = ({
   return (
     <article className={styles.main}>
       <div className={styles.section}>
-        {/* {products.map((item, index) => {
-          return ( */}
-        <div
-          className={styles.mobileImageToggle}
-          // key={index}
-        >
+        <div className={styles.mobileImageToggle}>
           <button
             className={styles.lightBoxButton}
             onClick={() => setShowLightBox(false)}
@@ -41,8 +33,9 @@ const LightBox = ({
           <ul>
             <li onClick={nextSlide}>
               <button className={styles.mobileImageToggleLeftList}>
-                <FaChevronLeft
-                  fontSize={16}
+                <img
+                  src="/../../images/icon-previous.svg"
+                  alt="prev button"
                   onMouseOver={({ target }) => (target.style.color = "#eb9651")}
                   onMouseOut={({ target }) => (target.style.color = "#000")}
                 />
@@ -50,8 +43,9 @@ const LightBox = ({
             </li>
             <li onClick={previousSlide}>
               <button className={styles.mobileImageToggleRightList}>
-                <FaChevronRight
-                  fontSize={16}
+                <img
+                  src="/../../images/icon-next.svg"
+                  alt="prev button"
                   onMouseOver={({ target }) => (target.style.color = "#eb9651")}
                   onMouseOut={({ target }) => (target.style.color = "#000")}
                 />
@@ -76,8 +70,6 @@ const LightBox = ({
               })}
           </ul>
         </div>
-        {/* );
-        })} */}
       </div>
     </article>
   );
