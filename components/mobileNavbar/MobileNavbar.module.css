@@ -1,0 +1,90 @@
+.mobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeedf1;
+  max-width: 100%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.sub_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+/* .nav {
+    display: none;
+  } */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  padding: 2rem;
+  width: 70%;
+  height: 100%;
+  z-index: 110;
+  transition: all 0.3s ease-in-out;
+}
+.closeMenu{
+    margin-bottom: 50px;
+}
+/* .mobileNav.open {
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  padding: 2rem;
+} */
+
+.profile ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobileNav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-direction: column;
+}
+.mobileNav ul li {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.mobileBrandLogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 2rem;
+}
+/* .profile .button {
+  cursor: pointer;
+  outline: none;
+} */
+
+@media (min-width: 1024px) {
+  .mobileHeader {
+    display: none;
+  }
+
+  .avatar {
+    width: 3rem;
+  }
+  .profile ul {
+    gap: 2rem;
+  }
+}

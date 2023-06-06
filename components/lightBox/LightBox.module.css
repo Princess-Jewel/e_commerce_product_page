@@ -1,0 +1,66 @@
+.main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #000;
+  z-index: 100;
+  opacity: 0.75;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.mobileImageToggle {
+  position: relative;
+}
+.hideImageToggle {
+  display: none;
+}
+.mainImage {
+  width: 100%;
+
+  border-radius: 16px;
+}
+
+.mobileImageToggleLeftList,
+.mobileImageToggleRightList {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  transform: translateY(50%);
+  outline: none;
+  border: none;
+}
+
+.mobileImageToggleLeftList {
+  left: 1rem;
+}
+.mobileImageToggleRightList {
+  right: 1rem;
+}
+.lightButtonImage {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+}
+.lightBoxButton {
+    background: transparent;
+    /* color: transparent; */
+    outline: none;
+    border: none;
+}
+
+@media (min-width: 768px) {
+  .mainImage {
+    /* width: 100%; */
+    height: 900px;
+  }
+}
