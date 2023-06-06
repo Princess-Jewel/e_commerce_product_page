@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .profile {
@@ -21,6 +21,7 @@
 
 .avatar {
   width: 2rem;
+  cursor: pointer;
 }
 
 .cartIcon {
@@ -40,12 +41,34 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 2.2rem;
   }
 
-  .nav ul li {
+  .navItem {
     color: #727474;
     font-size: 1rem;
+    position: relative;
+  }
+
+  .navItem:after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    top: 3.4rem;
+    left: 0;
+    width: 0%;
+    background: rgb(234 88 12);
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .navItem:hover:after,
+  .navItem:hover:after {
+    width: 100%;
+    background:rgb(234 88 12);
   }
   .brandLogo {
     display: flex;

@@ -17,11 +17,11 @@ const Navbar = () => {
         {/* NAV LIST */}
         <div className={styles.nav}>
           <ul className={styles.navList}>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li className={styles.navItem}>Collections</li>
+            <li className={styles.navItem}>Men</li>
+            <li className={styles.navItem}>Women</li>
+            <li className={styles.navItem}>About</li>
+            <li className={styles.navItem}>Contact</li>
           </ul>
         </div>
       </div>

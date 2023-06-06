@@ -36,8 +36,7 @@ const LightBox = ({
                 <img
                   src="/../../images/icon-previous.svg"
                   alt="prev button"
-                  onMouseOver={({ target }) => (target.style.color = "#eb9651")}
-                  onMouseOut={({ target }) => (target.style.color = "#000")}
+                  
                 />
               </button>
             </li>
@@ -46,8 +45,7 @@ const LightBox = ({
                 <img
                   src="/../../images/icon-next.svg"
                   alt="prev button"
-                  onMouseOver={({ target }) => (target.style.color = "#eb9651")}
-                  onMouseOut={({ target }) => (target.style.color = "#000")}
+               
                 />
               </button>
             </li>
