@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { HiMenu } from "react-icons/hi";
+// import { HiMenu } from "react-icons/hi";
 import styles from "./MobileNavbar.module.css";
 
 const MobileNavbar = () => {

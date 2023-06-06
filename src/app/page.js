@@ -51,6 +51,9 @@ const page = () => {
           slideIndex={slideIndex}
           nextSlide={nextSlide}
           setShowLightBox={setShowLightBox}
+          value={value}
+          setValue={setValue}
+          mainImage={mainImage}
         />
       )}
       <section className={styles.section}>

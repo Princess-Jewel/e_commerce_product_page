@@ -161,7 +161,7 @@
   top: 50%;
   padding: 0.875rem 1rem;
   cursor: pointer;
-  transform: translateY(50%);
+  /* transform: translateY(50%); */
   outline: none;
   border: none;
 }
@@ -259,4 +259,5 @@
   .mobileList{
     display: none;
   }
+  
 }
