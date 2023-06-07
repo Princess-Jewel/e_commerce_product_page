@@ -4,9 +4,9 @@ import { data } from "./data";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import styles from "./page.module.css";
-import LightBox from "../../components/lightBox/LightBox";
-import MobileNavbar from "../../components/mobileNavbar/MobileNavbar";
-import Navbar from "../../components/navbar/Navbar";
+import MobileNavbar from "@/components/mobileNavbar/MobileNavbar";
+import Navbar from "@/components/navbar/Navbar";
+import LightBox from "@/components/lightBox/LightBox";
 
 const page = () => {
   const [products] = useState(data);
@@ -41,9 +41,9 @@ const page = () => {
 
   return (
     <>
-      <MobileNavbar />
-      <Navbar />
-      {showLightBox && (
+  <MobileNavbar/>
+     <Navbar/>
+     {showLightBox && (
         <LightBox
           products={products}
           previousSlide={previousSlide}

@@ -48,6 +48,7 @@
     color: #727474;
     font-size: 1rem;
     position: relative;
+    cursor: pointer;
   }
 
   .navItem:after {
