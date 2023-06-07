@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
+import { ShopContext } from "@/context/ShopContext";
 import { data } from "./data";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import styles from "./page.module.css";
 import MobileNavbar from "@/components/mobileNavbar/MobileNavbar";
 import Navbar from "@/components/navbar/Navbar";
@@ -11,17 +10,19 @@ import LightBox from "@/components/lightBox/LightBox";
 const page = () => {
   const [products] = useState(data);
   const [value, setValue] = useState(0);
-  const { mainImage } = products[value];
+  const { mainImage} = products[value];
   const [amount, setAmount] = useState(0);
   const [slideIndex, setSlideIndex] = useState(1);
   const [showLightBox, setShowLightBox] = useState(false);
 
-  const handleMinus = () => {
-    setAmount(amount - 1);
-    if (amount <= 0) {
-      setAmount(0);
-    }
-  };
+  const { addToCart, cartItems, removeFromCart} = useContext(ShopContext);
+
+  // const handleMinus = () => {
+  //   setAmount((prevAmount) => {
+  //     const newAmount = prevAmount - 1;
+  //     return newAmount >= 0 ? newAmount : 0;
+  //   });
+  // };
 
   const previousSlide = () => {
     if (slideIndex !== 1) {
@@ -39,11 +40,23 @@ const page = () => {
     }
   };
 
+  // const handleAddToCart = () => {
+  //   addToCart(selectedItemId);
+  //   console.log(selectedItemId);
+  // };
+  // const handleAddToCart = (itemId) => {
+  //   addToCart(itemId);
+  // };
+
+  const handleAddToCart = (itemId) => {
+    addToCart(itemId);
+  };
+
   return (
     <>
-  <MobileNavbar/>
-     <Navbar/>
-     {showLightBox && (
+      <MobileNavbar />
+      <Navbar />
+      {showLightBox && (
         <LightBox
           products={products}
           previousSlide={previousSlide}
@@ -59,6 +72,7 @@ const page = () => {
         <article>
           <div className={styles.mobileSlide}>
             {products.map((item, index) => {
+          
               return (
                 <div
                   className={
@@ -78,12 +92,17 @@ const page = () => {
                   <ul className={styles.mobileList}>
                     <li onClick={nextSlide}>
                       <button className={styles.mobileImageToggleLeftList}>
-                        <FaChevronLeft fontSize={16} />
+                        <img
+                          src="../../images/icon-previous.svg"
+                          alt="previous icon"
+                        />
+                        {/* <FaChevronLeft fontSize={16} /> */}
                       </button>
                     </li>
                     <li onClick={previousSlide}>
                       <button className={styles.mobileImageToggleRightList}>
-                        <FaChevronRight fontSize={16} />
+                        <img src="../../images/icon-next.svg" alt="next icon" />
+                        {/* <FaChevronRight fontSize={16} /> */}
                       </button>
                     </li>
                   </ul>
@@ -99,15 +118,15 @@ const page = () => {
               className={styles.mainImage}
               onClick={() => setShowLightBox(true)}
             />
-
-          
           </div>
 
           <ul className={styles.list}>
             {products &&
               products?.map((item, index) => {
                 return (
-                  <li onClick={() => setValue(index)} key={item.id}>
+                  <li onClick={() => {
+                    setValue(index)
+                  }} key={item.id}>
                     <img
                       src={item.thumbnail}
                       alt={item.alt}
@@ -123,7 +142,7 @@ const page = () => {
 
         <article className={styles.productDetails}>
           <h2 className={styles.subHeading}>SNEAKER COMPANY</h2>
-          <h1 className={styles.heading}>Fall Limited Edition Sneakers</h1>
+          <h1 className={styles.heading}>{`${products[value].title}`}</h1>
           <p className={styles.text}>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole. They'll withstand everything
@@ -131,7 +150,7 @@ const page = () => {
           </p>
           <div className={styles.amountAndPercentage}>
             <ul>
-              <li className={styles.amount}>$125.00</li>
+              <li className={styles.amount}>{`${products[value].price}`}</li>
               <li className={styles.amountSpan}>50%</li>
             </ul>
             <p className={styles.discount}>
@@ -140,23 +159,27 @@ const page = () => {
           </div>
 
           <div className={styles.counterAndAdd}>
-      
             <ul className={styles.counterList}>
-              <li onClick={handleMinus}>
+            <li onClick={() => removeFromCart(products[value].id)}>
                 <img src="../../images/icon-minus.svg" alt="minus sign" />
               </li>
-              <li>{amount}</li>
-              <li onClick={() => setAmount(amount + 1)}>
+              <li>{cartItems[products[value].id]}</li>
+              {/* <li>{cartItems[products.id]}</li> */}
+              <li onClick={() => addToCart(products[value].id)}>
                 <img src="../../images/icon-plus.svg" alt="plus sign" />
               </li>
             </ul>
 
-            <button className={styles.button}>
-              <AiOutlineShoppingCart fontSize={20} />
+            <button
+              className={styles.button}
+              onClick={() => handleAddToCart(products[value].id)}
+              
+            >
+              <img src="../../images/icon-cart.svg" alt="cart icon" />
+              {/* <AiOutlineShoppingCart fontSize={20} /> */}
               Add to cart
             </button>
           </div>
-
         </article>
       </section>
     </>

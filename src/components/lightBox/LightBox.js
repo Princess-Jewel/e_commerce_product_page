@@ -31,7 +31,7 @@ const LightBox = ({
             className={styles.mainImage}
           />
 
-          <ul>
+          <ul className={styles.mobileToggleList}>
             <li onClick={nextSlide}>
               <button className={styles.mobileImageToggleLeftList}>
                 <img

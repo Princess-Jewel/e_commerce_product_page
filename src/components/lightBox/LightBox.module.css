@@ -30,13 +30,12 @@
   position: relative;
 }
 .lightButtonImage {
-
   width: 30px;
 }
 .lightBoxButton {
   top: -20%;
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
   background: transparent;
   outline: none;
   border: none;
@@ -51,6 +50,9 @@
 .default {
   cursor: pointer;
 }
+.mobileToggleList{
+  display: none;
+}
 
 @media (min-width: 768px) {
   .mainImage {
@@ -59,8 +61,14 @@
   .list {
     gap: 2rem;
   }
+
 }
 @media (min-width: 1024px) {
+
+.mobileToggleList{
+  display: block;
+}
+
   .mobileImageToggleLeftList,
   .mobileImageToggleRightList {
     position: absolute;

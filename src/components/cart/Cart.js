@@ -1,35 +1,58 @@
 "use client";
-import React from "react";
+import React, { useContext, useState } from "react";
+import { data } from "@/app/data";
+import { ShopContext } from "@/context/ShopContext";
 import styles from "./Cart.module.css";
 
 const Cart = () => {
-  const text = "Fall Limited Edition Sneakers";
+  const [products] = useState(data);
+  // const [products] = useState(data);
+  const [value, setValue] = useState(0);
+  // const { id} = products[value];
+  const { id } = products[value];
+  const { cartItems, deleteCartItem } = useContext(ShopContext);
   return (
     <div className={styles.main}>
       <h2 className={styles.title}>Cart</h2>
-      <div className={styles.cartDetails}>
-        <img
-          src="/../../images/image-product-1-thumbnail.jpg"
-          alt="product image"
-          className={styles.productImage}
-        />
 
-        <div className={styles.textDetails}>
-          <p className={styles.name}>{`${text.substring(0, 28)}...`}</p>
-          <p className={styles.amount}>
-            $125.00 x 3{" "}
-            <span>
-              <b>$375.00</b>
-            </span>
-          </p>
-        </div>
+      {data.map(product => {
+        if (cartItems[product.id] !== 0) {
+          return (
+            <div className={styles.cartDetails} key={product.id}>
+              <img
+                src={product.thumbnail}
+                alt="product image"
+                className={styles.productImage}
+              />
 
-        <img
-          src="/../../images/icon-delete.svg"
-          alt="product image"
-          className={styles.delete}
-        />
-      </div>
+              <div className={styles.textDetails}>
+                <p className={styles.name}>{`${product.title.substring(
+                  0,
+                  28
+                )}...`}</p>
+                <p className={styles.amount}>
+                  {/* ({cartItems[product.id]}) */}
+                  {`$${product.price} x ${cartItems[product.id]}`}
+                  &nbsp;
+                  <span>
+                    <b>
+                      {Number(product.price) *
+                        Number(cartItems[products[value].id])}
+                    </b>
+                  </span>
+                </p>
+              </div>
+
+              <img
+                src="/../../images/icon-delete.svg"
+                alt="product image"
+                className={styles.delete}
+                onClick={() => deleteCartItem(product.id)}
+              />
+            </div>
+          );
+        } else return null;
+      })}
 
       <button className={styles.button}>Checkout</button>
     </div>
