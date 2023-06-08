@@ -1,37 +1,34 @@
 .header {
   display: none;
 }
-.profileImage{
-  border: 3px hsl(26, 100%, 55%) solid;
-  border-radius: 50%;
-}
-.sub_header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2.5rem;
-}
 
-.profile {
-  position: relative;
-}
-
-.profile ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-
-.avatar {
-  width: 2rem;
-  cursor: pointer;
-}
-
-.cartIcon {
-  cursor: pointer;
-}
 @media (min-width: 1024px) {
+  .cartIcon {
+    cursor: pointer;
+  }
+  .profile {
+    position: relative;
+  }
+  .profileImage{
+    border: 2px hsl(26, 100%, 55%) solid;
+    border-radius: 50%;
+  }
+  .sub_header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .avatar {
+    width: 2rem;
+    cursor: pointer;
+  }
+  .profile ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
   .header {
     display: flex;
     justify-content: space-between;
