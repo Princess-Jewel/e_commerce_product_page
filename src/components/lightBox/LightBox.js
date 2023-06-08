@@ -4,14 +4,28 @@ import styles from "./LightBox.module.css";
 
 const LightBox = ({
   products,
-  nextSlide,
-  previousSlide,
   setShowLightBox,
   value,
   setValue,
-  currentImage,
+  slideIndex,
+  setSlideIndex,
   mainImage
 }) => {
+  const previousSlide = () => {
+    if (slideIndex !== 1) {
+      setSlideIndex(slideIndex - 1);
+    } else if (slideIndex === 1) {
+      setSlideIndex(products.length);
+    }
+  };
+
+  const nextSlide = () => {
+    if (slideIndex !== products.length) {
+      setSlideIndex(slideIndex + 1);
+    } else if (slideIndex === products.length) {
+      setSlideIndex(1);
+    }
+  };
   return (
     <article className={styles.main}>
       <div className={styles.section}>

@@ -17,7 +17,6 @@ const page = () => {
   const [slideIndex, setSlideIndex] = useState(DEFAULT_QUANTITY);
   const [showLightBox, setShowLightBox] = useState(false);
   const [quantity, setQuantity] = useState(DEFAULT_QUANTITY);
-  const [currentImage, setCurrentImage] = useState();
 
   const { addToCart, cartItems, removeFromCart, deleteCartItem } =
     useContext(ShopContext);
@@ -35,22 +34,6 @@ const page = () => {
     }
   }, [value, cartItems]);
 
-  const previousSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(products.length);
-    }
-  };
-
-  const nextSlide = () => {
-    if (slideIndex !== products.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === products.length) {
-      setSlideIndex(1);
-    }
-  };
-
   return (
     <>
       <MobileNavbar />
@@ -58,13 +41,11 @@ const page = () => {
       {showLightBox && (
         <LightBox
           products={products}
-          previousSlide={previousSlide}
           slideIndex={slideIndex}
-          nextSlide={nextSlide}
+          setSlideIndex={setSlideIndex}
           setShowLightBox={setShowLightBox}
           value={value}
           setValue={setValue}
-          currentImage={currentImage}
           mainImage={mainImage}
         />
       )}
@@ -75,7 +56,9 @@ const page = () => {
               src={mainImage}
               alt="image-product"
               className={styles.mainImage}
-              onClick={() => {setShowLightBox(true); setCurrentImage(mainImage)}}
+              onClick={() => {
+                setShowLightBox(true);
+              }}
             />
           </div>
 
