@@ -16,6 +16,7 @@
   border-bottom: 1px solid hsl(220, 14%, 75%);
   font-weight: 700;
   padding: 0 0 1.7rem 0;
+  font-size: 1rem;
 }
 .button {
   border-radius: 0.5rem;
@@ -58,7 +59,7 @@
   padding: 60px 0px;
   font-weight: 700;
   color: hsl(220, 14%, 75%);
-  font-size: 1rem;
+
 }
 @media (min-width: 1024px) {
   .button {
