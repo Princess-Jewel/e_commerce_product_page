@@ -10,6 +10,7 @@ Add items to the cart
 View the cart and remove items from it
 
 LIVE LINK (https://my-e-commerce-product-page.vercel.app/)
+CHALLENGE LINK (https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6)
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
