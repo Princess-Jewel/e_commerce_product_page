@@ -160,11 +160,16 @@ const page = () => {
 
           <div className={styles.counterAndAdd}>
             <ul className={styles.counterList}>
-            <li onClick={() => removeFromCart(products[value].id)}>
+            <li onClick={() => {
+         if (products[value].quantity === 0) return;
+              
+              removeFromCart(products[value].id)
+            }} >
                 <img src="../../images/icon-minus.svg" alt="minus sign" />
               </li>
               <li>{cartItems[products[value].id]}</li>
               {/* <li>{cartItems[products.id]}</li> */}
+              
               <li onClick={() => addToCart(products[value].id)}>
                 <img src="../../images/icon-plus.svg" alt="plus sign" />
               </li>

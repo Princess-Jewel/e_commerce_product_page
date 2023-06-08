@@ -17,6 +17,8 @@ const Cart = () => {
 
       {data.map(product => {
         if (cartItems[product.id] !== 0) {
+          console.log(product.price);
+          console.log(cartItems[products[value].id]);
           return (
             <div className={styles.cartDetails} key={product.id}>
               <img
