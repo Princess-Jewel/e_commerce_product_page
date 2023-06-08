@@ -8,7 +8,7 @@ import MobileNavbar from "@/components/mobileNavbar/MobileNavbar";
 import Navbar from "@/components/navbar/Navbar";
 import LightBox from "@/components/lightBox/LightBox";
 
-const DEFAULT_QUANTITY = 1;
+const DEFAULT_QUANTITY = 0;
 
 const page = () => {
   const [products] = useState(data);
@@ -124,7 +124,7 @@ const page = () => {
             <ul className={styles.counterList}>
               <li
                 onClick={() => {
-                  if (quantity === 1 && item) {
+                  if (quantity === 0 && item) {
                     deleteCartItem(products[value].id);
                     return;
                   }

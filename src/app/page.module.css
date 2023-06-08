@@ -157,7 +157,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 20px;
-  width: 75%;
+  /* width: 75%; */
     padding: 0px 16px;
 }
 .list li img{
@@ -169,7 +169,6 @@
   .mobileSlide {
     display: none;
   }
-
 
   .list {
     gap: 2rem;
@@ -195,7 +194,6 @@
     place-items: center;
   }
   
-
   .heading {
     font-size: 3rem;
     line-height: 1;
