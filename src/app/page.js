@@ -95,7 +95,7 @@ const page = () => {
           </p>
           <div className={styles.amountAndPercentage}>
             <ul>
-              <li className={styles.amount}>{`$${products[value].price}`}</li>
+              <li className={styles.amount}>{`$${products[value].price}.00`}</li>
               <li className={styles.amountSpan}>50%</li>
             </ul>
             <p className={styles.discount}>

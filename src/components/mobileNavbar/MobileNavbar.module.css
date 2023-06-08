@@ -45,7 +45,17 @@
 }
 .cartIcon {
   cursor: pointer;
+  position: relative;
 }
+/* .totalCartItems{
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 50%;
+  padding: 1px 5px;
+  color: #fff;
+} */
 .mobileNav ul {
   display: flex;
   justify-content: flex-start;

@@ -6,7 +6,6 @@ import Cart from "../cart/Cart";
 
 const Navbar = () => {
   const [openCart, setOpenCart] = useState(false);
-  const { cartItems} = useContext(ShopContext);
 
   return (
     <header className={styles.header}>
@@ -34,7 +33,9 @@ const Navbar = () => {
             onClick={() => setOpenCart(!openCart)}
           >
             <img src="../images/icon-cart.svg" alt="cart icon" />
+            {/* <p className={styles.totalCartItems}>{quantity}</p> */}
           </li>
+
           <li className={styles.profileImage}>
             <img
               src="../images/image-avatar.png"
@@ -42,6 +43,7 @@ const Navbar = () => {
               className={styles.avatar}
             />
           </li>
+        
         </ul>
         {openCart && <Cart />}
       </div>

@@ -52,6 +52,7 @@ const MobileNavbar = () => {
             onClick={() => setOpenCart(!openCart)}
           >
             <img src="../images/icon-cart.svg" alt="cart icon" />
+                 {/* <p className={styles.totalCartItems}>{quantity}</p> */}
           </li>
           <li className={styles.profileImage}>
             <img
