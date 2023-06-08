@@ -7,7 +7,10 @@
   margin: auto;
   padding: 1.5rem;
 }
-
+.profileImage{
+  border: 3px hsl(26, 100%, 55%) solid;
+  border-radius: 50%;
+}
 .sub_header {
   display: flex;
   justify-content: flex-start;
@@ -53,8 +56,9 @@
 .mobileNav ul li {
   font-weight: 700;
   cursor: pointer;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
+  color:hsl(220, 13%, 13%);
   cursor: pointer;
 }
 

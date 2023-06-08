@@ -8,7 +8,7 @@
   z-index: 120;
   padding: 2rem 1.5rem;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  border-radius: 1rem;
+  border-radius: 8px;
   transition: all 0.5s ease;
 }
 .title {
@@ -54,7 +54,9 @@
   border-radius: 6px;
 }
 .empty{
-  padding: 20px;
+  text-align: center;
+  padding: 60px 0px;
+  font-weight: 700;
 }
 @media (min-width: 1024px) {
   .button {

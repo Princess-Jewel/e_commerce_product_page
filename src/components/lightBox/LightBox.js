@@ -9,7 +9,7 @@ const LightBox = ({
   setShowLightBox,
   value,
   setValue,
-  mainImage,
+  currentImage
 }) => {
   return (
     <article className={styles.main}>
@@ -26,10 +26,11 @@ const LightBox = ({
             />
           </button>
           <img
-            src={mainImage}
+            src={currentImage}
             alt="image-product"
             className={styles.mainImage}
           />
+          
 
           <ul className={styles.mobileToggleList}>
             <li onClick={nextSlide}>

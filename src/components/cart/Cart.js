@@ -1,24 +1,16 @@
 "use client";
-import React, { useContext, useState } from "react";
-import { data } from "@/app/data";
+import React, { useContext } from "react";
 import { ShopContext } from "@/context/ShopContext";
 import styles from "./Cart.module.css";
 
 const Cart = () => {
-  const [products] = useState(data);
-  // const [products] = useState(data);
-  const [value, setValue] = useState(0);
-  // const { id} = products[value];
-  const { id } = products[value];
   const { cartItems, deleteCartItem } = useContext(ShopContext);
   return (
     <div className={styles.main}>
       <h2 className={styles.title}>Cart</h2>
 
-      {data.map(product => {
-        if (cartItems[product.id] !== 0) {
-          console.log(product.price);
-          console.log(cartItems[products[value].id]);
+      {cartItems.length > 0 ? (
+        cartItems.map(product => {
           return (
             <div className={styles.cartDetails} key={product.id}>
               <img
@@ -33,14 +25,10 @@ const Cart = () => {
                   28
                 )}...`}</p>
                 <p className={styles.amount}>
-                  {/* ({cartItems[product.id]}) */}
-                  {`$${product.price} x ${cartItems[product.id]}`}
+                  {`$${product.price} x ${product.quantity}`}
                   &nbsp;
                   <span>
-                    <b>
-                      {Number(product.price) *
-                        Number(cartItems[products[value].id])}
-                    </b>
+                    <b>{Number(product.price) * Number(product.quantity)}</b>
                   </span>
                 </p>
               </div>
@@ -53,10 +41,16 @@ const Cart = () => {
               />
             </div>
           );
-        } else return null;
-      })}
+        })
+      ) : (
+        <div>
+          <p className={styles.empty}>Your cart is empty</p>
+        </div>
+      )}
 
-      <button className={styles.button}>Checkout</button>
+      {cartItems.length > 0 && (
+        <button className={styles.button}>Checkout</button>
+      )}
     </div>
   );
 };

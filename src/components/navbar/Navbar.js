@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ShopContext } from "@/context/ShopContext";
 import styles from "./Navbar.module.css";
 import Cart from "../cart/Cart";
 
 const Navbar = () => {
   const [openCart, setOpenCart] = useState(false);
+  const { cartItems} = useContext(ShopContext);
 
   return (
     <header className={styles.header}>
@@ -33,7 +35,7 @@ const Navbar = () => {
           >
             <img src="../images/icon-cart.svg" alt="cart icon" />
           </li>
-          <li>
+          <li className={styles.profileImage}>
             <img
               src="../images/image-avatar.png"
               alt="avatar"

@@ -15,7 +15,7 @@
   display: none;
 }
 .selected {
-  border: 3px #eb9651 solid;
+  border: 3px hsl(26, 100%, 55%) solid;
   opacity: 0.8;
 }
 .default {
@@ -30,7 +30,7 @@
 }
 .subHeading {
   padding: 0.25rem 0;
-  color: #fb923c;
+  color: hsl(26, 100%, 55%);
   text-transform: uppercase;
   letter-spacing: 0.025em;
   font-size: 0.875rem;
@@ -39,21 +39,22 @@
   margin-bottom: 10px;
 }
 .heading {
-  color: rgb(15 23 42);
+  color: hsl(220, 13%, 13%);
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 .text {
-  color: rgb(71 85 105);
+  color: hsl(219, 9%, 45%);
   line-height: 1.625;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 .amountSpan {
-  color: #fb923c;
+  color: hsl(26, 100%, 55%);
   padding: 2px 6px;
-  background-color: #feefe2;
+  background-color: hsl(25, 100%, 94%);
   letter-spacing: 0.025em;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -63,7 +64,7 @@
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 .amount {
-  color: rgb(15 23 42);
+  color: hsl(220, 13%, 13%);
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -71,7 +72,7 @@
 .discount {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgb(71 85 105);
+  color: hsl(220, 14%, 75%);
 }
 .amountAndPercentage {
   display: flex;
@@ -92,19 +93,23 @@
   width: 100%;
   margin-top: 2.5rem;
 }
+
 .counterList {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f8fd;
+  background-color: hsl(223, 64%, 98%);
   padding: 1rem 1.5rem;
   gap: 1rem;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); */
   border-radius: 0.25rem;
   font-weight: 700;
   width: 100%;
 }
 .counterList li {
+  color: hsl(220, 13%, 13%);
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
 }
 .button {

@@ -53,7 +53,7 @@ const MobileNavbar = () => {
           >
             <img src="../images/icon-cart.svg" alt="cart icon" />
           </li>
-          <li>
+          <li className={styles.profileImage}>
             <img
               src="../images/image-avatar.png"
               alt="avatar"
