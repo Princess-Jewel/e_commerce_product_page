@@ -11,9 +11,6 @@
   cursor: pointer;
 }
 
-.list {
-  display: none;
-}
 .selected {
   border: 3px hsl(26, 100%, 55%) solid;
   opacity: 0.8;
@@ -135,9 +132,6 @@
 .mobileImageToggle {
   position: relative;
 }
-.hideImageToggle {
-  display: none;
-}
 
 .mobileImageToggleLeftList,
 .mobileImageToggleRightList {
@@ -147,7 +141,6 @@
   top: 50%;
   padding: 0.875rem 1rem;
   cursor: pointer;
-  /* transform: translateY(50%); */
   outline: none;
   border: none;
 }
@@ -157,17 +150,26 @@
 .mobileImageToggleRightList {
   right: 1rem;
 }
-
-.desktopSlide {
-  display: none;
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+  width: 75%;
+    padding: 0px 16px;
 }
+.list li img{
+  width: 80px;
+    border-radius: 12px;
+}
+
 @media (min-width: 768px) {
   .mobileSlide {
     display: none;
   }
-  .desktopSlide {
-    display: block;
-  }
+
   .section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -214,20 +216,7 @@
   .productDetails {
     padding: 25px 30px 50px;
   }
-  .list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    /* list-style: none; */
-    gap: 1rem;
-    margin-top: 20px;
-    width: 75%;
-  }
-  .list li img {
-    width: 80px;
-    border-radius: 12px;
-  }
+
   .subHeading,
   .heading {
     margin-bottom: 20px;

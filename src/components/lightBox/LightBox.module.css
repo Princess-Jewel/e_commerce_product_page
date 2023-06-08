@@ -50,9 +50,26 @@
 .default {
   cursor: pointer;
 }
-.mobileToggleList{
-  display: none;
+
+.mobileImageToggleLeftList,
+.mobileImageToggleRightList {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 40%;
+  padding: 0.875rem 1.2rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
+
+.mobileImageToggleLeftList {
+  left: 0;
+}
+.mobileImageToggleRightList {
+  right: 0;
+}
+
 
 @media (min-width: 768px) {
   .mainImage {
@@ -64,30 +81,6 @@
 
 }
 @media (min-width: 1024px) {
-
-.mobileToggleList{
-  display: block;
-}
-
-  .mobileImageToggleLeftList,
-  .mobileImageToggleRightList {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff;
-    top: 40%;
-    padding: 0.875rem 1.2rem;
-    cursor: pointer;
-    outline: none;
-    border: none;
-  }
-
-  .mobileImageToggleLeftList {
-    left: -1.5rem;
-  }
-  .mobileImageToggleRightList {
-    right: -1.5rem;
-  }
-
   .list {
     display: flex;
     justify-content: flex-start;
@@ -101,4 +94,12 @@
     width: 80px;
     border-radius: 12px;
   }
+  .mobileImageToggleLeftList {
+    left: -1.5rem;
+  }
+  .mobileImageToggleRightList {
+    right: -1.5rem;
+  }
+
+
 }

@@ -9,7 +9,8 @@ const LightBox = ({
   setShowLightBox,
   value,
   setValue,
-  currentImage
+  currentImage,
+  mainImage
 }) => {
   return (
     <article className={styles.main}>
@@ -26,7 +27,7 @@ const LightBox = ({
             />
           </button>
           <img
-            src={currentImage}
+            src={mainImage}
             alt="image-product"
             className={styles.mainImage}
           />
