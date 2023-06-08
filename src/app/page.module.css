@@ -170,18 +170,11 @@
     display: none;
   }
 
-  .section {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 80%;
-    padding: 0px 80px;
-  }
+
   .list {
     gap: 2rem;
   }
-  .mainImage {
-    width: 80%;
-  }
+ 
   .heading {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -194,10 +187,14 @@
 }
 @media (min-width: 1024px) {
   .section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 80%;
     padding: 0px 130px;
     margin: 100px auto 0px;
     place-items: center;
   }
+  
 
   .heading {
     font-size: 3rem;
@@ -211,6 +208,7 @@
     padding: 1rem;
   }
   .mainImage {
+    width:80%;
     border-radius: 16px;
   }
   .productDetails {
