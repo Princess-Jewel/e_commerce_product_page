@@ -32,8 +32,8 @@ https://res.cloudinary.com/dpqxraalv/image/upload/v1686263629/Capture_sixfqg.png
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Princess-Jewel/e_commerce_product_page)
-- Live Site URL: [Add live site URL here](https://my-e-commerce-product-page.vercel.app/)
+- Solution URL: (https://github.com/Princess-Jewel/e_commerce_product_page)
+- Live Site URL: (https://my-e-commerce-product-page.vercel.app/)
 
 ### Built with
 
@@ -47,8 +47,8 @@ https://res.cloudinary.com/dpqxraalv/image/upload/v1686263629/Capture_sixfqg.png
 
 ## Author
 
-- Website - [Add your name here](https://princess-jewel.vercel.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Princess-Jewel)
-- Linkedin - [@yourusername](https://www.linkedin.com/in/princess-jewel-jel-edema)
+- Website - [Princess Jewel Jel-Edema](https://princess-jewel.vercel.app)
+- Frontend Mentor - [@Princess-Jewel](https://www.frontendmentor.io/profile/Princess-Jewel)
+- Linkedin - [princess-jewel-jel-edema](https://www.linkedin.com/in/princess-jewel-jel-edema)
 
 
